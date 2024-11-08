@@ -25,6 +25,11 @@
             max-width: 100%;
             width: auto !important;
         }
+        /* Ajuste para a largura das imagens do carrossel */
+        .fotorama__img {
+            width: 100%; /* Ajusta as imagens para se adaptarem à largura do container */
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -46,11 +51,11 @@
 
     <!-- Script de inicialização do Fotorama -->
     <script>
-        // Inicializando o Fotorama
         document.addEventListener('DOMContentLoaded', function () {
-            const fotorama = document.querySelector('.fotorama');
+            // Inicializando o Fotorama
+            var fotorama = document.querySelector('.fotorama');
             if (fotorama) {
-                $(fotorama).fotorama();  // Usando jQuery para inicializar o Fotorama
+                $(fotorama).fotorama(); // Usando jQuery para inicializar o Fotorama
             }
         });
     </script>

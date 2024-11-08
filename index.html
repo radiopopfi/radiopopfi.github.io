@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrossel com Link</title>
+    <title>Carrossel com Link e Animação</title>
 
     <style>
         /* Estilo para o container do carrossel */
@@ -148,8 +148,16 @@
             });
         });
 
+        // Função para animação automática
+        function autoSlide() {
+            changeImage(currentIndex + 1);
+        }
+
         // Inicia o carrossel mostrando a primeira imagem
         changeImage(0);
+
+        // Configura animação automática a cada 4 segundos
+        setInterval(autoSlide, 4000);
     </script>
 
 </body>

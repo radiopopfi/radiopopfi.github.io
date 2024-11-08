@@ -33,21 +33,21 @@
         <!-- Carrossel Fotorama -->
         <div class="fotorama" data-nav="thumbs" data-loop="true" data-autoplay="true" data-transition="fade" data-allowfullscreen="true" data-width="100%" data-maxwidth="1200" data-fit="contain">
             <!-- Imagens do carrossel -->
-            <img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/iverti.png?raw=true" alt="Imagem 1">
-            <img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/lamodas.png?raw=true" alt="Imagem 2">
-            <img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi1.png?raw=true" alt="Imagem 3">
-            <img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi2.png?raw=true" alt="Imagem 4">
-            <img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi3.png?raw=true" alt="Imagem 5">
+            <img src="https://github.com/radiopopfi/radiopopfi.github.io/raw/main/imagens/iverti.png" alt="Imagem 1">
+            <img src="https://github.com/radiopopfi/radiopopfi.github.io/raw/main/imagens/lamodas.png" alt="Imagem 2">
+            <img src="https://github.com/radiopopfi/radiopopfi.github.io/raw/main/imagens/popfi1.png" alt="Imagem 3">
+            <img src="https://github.com/radiopopfi/radiopopfi.github.io/raw/main/imagens/popfi2.png" alt="Imagem 4">
+            <img src="https://github.com/radiopopfi/radiopopfi.github.io/raw/main/imagens/popfi3.png" alt="Imagem 5">
         </div>
     </center>
 
     <!-- Script para o Fotorama -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.min.js"></script>
 
+    <!-- Script de inicialização do Fotorama -->
     <script>
-        // Inicializando o carrossel Fotorama quando o DOM for completamente carregado
-        document.addEventListener("DOMContentLoaded", function() {
-            // Certifique-se de que o Fotorama está ativado
+        // Inicializando o Fotorama
+        document.addEventListener('DOMContentLoaded', function () {
             const fotorama = document.querySelector('.fotorama');
             if (fotorama) {
                 $(fotorama).fotorama();  // Usando jQuery para inicializar o Fotorama

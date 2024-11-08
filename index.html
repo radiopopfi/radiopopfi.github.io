@@ -72,6 +72,23 @@
             opacity: 1;
             border: 2px solid #000;
         }
+
+        /* Estilo para a caixa do link no canto inferior esquerdo */
+        .link-box {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: #000;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .link-box:hover {
+            background-color: #333;
+        }
     </style>
 </head>
 <body>
@@ -99,6 +116,9 @@
         <img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi2.png?raw=true" alt="Thumbnail 4">
         <img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi3.png?raw=true" alt="Thumbnail 5">
     </div>
+
+    <!-- Link fixo no canto inferior esquerdo -->
+    <a href="https://popfi.com.br" class="link-box" target="_blank">popfi.com.br</a>
 
     <script>
         // Seletor para as imagens do carrossel e botões

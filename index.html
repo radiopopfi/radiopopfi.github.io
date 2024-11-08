@@ -168,6 +168,16 @@
 
         // Inicia o carrossel mostrando a primeira imagem
         changeImage(0);
+
+        // Função para autoplay
+        function startAutoplay() {
+            setInterval(() => {
+                changeImage(currentIndex + 1);
+            }, 4000); // 4 segundos
+        }
+
+        // Inicia o autoplay ao carregar a página
+        startAutoplay();
     </script>
 
 </body>

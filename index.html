@@ -9,22 +9,23 @@
         /* Estilo para o container do carrossel */
         .carousel-container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 800px; /* Ajustado para um tamanho mais adequado */
             margin: 0 auto;
-            overflow: hidden; /* Para esconder as imagens que estão fora do carrossel */
+            overflow: hidden;
             position: relative;
         }
 
         /* Estilo para as imagens do carrossel */
         .carousel-images {
             display: flex;
-            transition: transform 0.5s ease;
+            transition: transform 0.5s ease; /* Transição suave para as imagens */
         }
 
         .carousel-images img {
             width: 100%;
             height: auto;
-            display: block;
+            max-height: 500px; /* Limita a altura das imagens */
+            object-fit: cover; /* Garante que a imagem ocupe o espaço sem distorcer */
         }
 
         /* Botões de navegação */
@@ -80,8 +81,6 @@
         <div class="carousel-images">
             <img src="https://popfi.com.br/admin/midia/2f67aa6f8f73d6cefbffd3cc6392bb7b.png" alt="Imagem 1">
             <img src="https://popfi.com.br/admin/midia/940df51e332829a6c1e90191960ab432.png" alt="Imagem 2">
-            <img src="https://popfi.com.br/admin/midia/f38507095109ca7d3b4052ffef571aed.png" alt="Imagem 3">
-            <img src="https://popfi.com.br/admin/midia/a2ce82442eba86270c325711349068b6.png" alt="Imagem 4">
         </div>
 
         <!-- Botões de navegação -->
@@ -93,8 +92,6 @@
     <div class="thumbnails">
         <img src="https://popfi.com.br/admin/midia/2f67aa6f8f73d6cefbffd3cc6392bb7b.png" alt="Thumbnail 1">
         <img src="https://popfi.com.br/admin/midia/940df51e332829a6c1e90191960ab432.png" alt="Thumbnail 2">
-        <img src="https://popfi.com.br/admin/midia/f38507095109ca7d3b4052ffef571aed.png" alt="Thumbnail 3">
-        <img src="https://popfi.com.br/admin/midia/a2ce82442eba86270c325711349068b6.png" alt="Thumbnail 4">
     </div>
 
     <script>

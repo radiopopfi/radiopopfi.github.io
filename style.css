@@ -1,0 +1,17 @@
+/* Ajusta o tamanho das miniaturas */
+.fotorama .fotorama__nav--thumbs .fotorama__nav__frame {
+    padding: 2px;
+    height: 64px;
+}
+
+.fotorama .fotorama__thumb-border {
+    height: 60px;
+    border-width: 2px;
+    margin-top: 2px;
+}
+
+/* Ajusta o tamanho do contêiner */
+.fotorama__wrap {
+    max-width: 100%;
+    width: auto !important;
+}

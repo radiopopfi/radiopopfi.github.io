@@ -1,7 +1,61 @@
-<div class="carousel">
-    <div><img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/iverti.png?raw=true" alt="Imagem 1"></div>
-    <div><img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/lamodas.png?raw=true" alt="Imagem 2"></div>
-    <div><img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi1.png?raw=true" alt="Imagem 3"></div>
-    <div><img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi2.png?raw=true" alt="Imagem 4"></div>
-    <div><img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi3.png?raw=true" alt="Imagem 5"></div>
-</div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel Slick</title>
+    
+    <!-- Link para o CSS do Slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <!-- Estilos adicionais -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .carousel {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .carousel img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Estrutura do carrossel -->
+    <div class="carousel">
+        <div><img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/iverti.png?raw=true" alt="Imagem 1"></div>
+        <div><img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/lamodas.png?raw=true" alt="Imagem 2"></div>
+        <div><img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi1.png?raw=true" alt="Imagem 3"></div>
+        <div><img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi2.png?raw=true" alt="Imagem 4"></div>
+        <div><img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi3.png?raw=true" alt="Imagem 5"></div>
+    </div>
+
+    <!-- Link para o jQuery (necessário para o Slick) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Link para o JavaScript do Slick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Script de inicialização do carrossel -->
+    <script>
+        $(document).ready(function(){
+            $('.carousel').slick({
+                autoplay: true,
+                autoplaySpeed: 4000,
+                dots: true,
+                arrows: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        });
+    </script>
+</body>
+</html>

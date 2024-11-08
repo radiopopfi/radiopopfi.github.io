@@ -1,4 +1,6 @@
-/* Ajusta o tamanho das miniaturas */
+/* Personalize o estilo do carrossel aqui */
+
+/* Ajuste o tamanho das miniaturas */
 .fotorama .fotorama__nav--thumbs .fotorama__nav__frame {
     padding: 2px;
     height: 64px;
@@ -10,7 +12,7 @@
     margin-top: 2px;
 }
 
-/* Ajusta o tamanho do contêiner */
+/* Ajuste o tamanho do contêiner */
 .fotorama__wrap {
     max-width: 100%;
     width: auto !important;

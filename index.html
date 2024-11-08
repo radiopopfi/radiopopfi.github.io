@@ -26,7 +26,6 @@
             width: auto !important;
         }
     </style>
-
 </head>
 <body>
 
@@ -45,5 +44,14 @@
     <!-- Script para o Fotorama -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.min.js"></script>
 
+    <script>
+        // Inicializando o carrossel do Fotorama, se necessário
+        document.addEventListener("DOMContentLoaded", function() {
+            // Certifique-se de que o Fotorama está ativado no carrossel
+            var fotorama = $('.fotorama').fotorama();
+        });
+    </script>
+
 </body>
 </html>
+

@@ -3,59 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrossel Slick</title>
-    
-    <!-- Link para o CSS do Slick -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-
-    <!-- Estilos adicionais -->
+    <title>Carrossel de Iframes</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-        .carousel {
+        /* Estilo para o container do carrossel */
+        .iframe-carousel {
             width: 80%;
+            max-width: 800px;
             margin: 0 auto;
+            overflow: hidden;
+            position: relative;
         }
-        .carousel img {
+        .iframe-container {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .iframe-container iframe {
             width: 100%;
-            height: auto;
+            height: 500px; /* Ajuste a altura conforme necessário */
+            border: none;
         }
     </style>
 </head>
 <body>
 
-    <!-- Estrutura do carrossel -->
-    <div class="carousel">
-        <div><img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/iverti.png?raw=true" alt="Imagem 1"></div>
-        <div><img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/lamodas.png?raw=true" alt="Imagem 2"></div>
-        <div><img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi1.png?raw=true" alt="Imagem 3"></div>
-        <div><img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi2.png?raw=true" alt="Imagem 4"></div>
-        <div><img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi3.png?raw=true" alt="Imagem 5"></div>
+    <!-- Container do carrossel com iframes -->
+    <div class="iframe-carousel">
+        <div class="iframe-container">
+            <iframe src="https://example.com" title="Iframe 1"></iframe>
+            <iframe src="https://example.org" title="Iframe 2"></iframe>
+            <iframe src="https://example.net" title="Iframe 3"></iframe>
+        </div>
     </div>
 
-    <!-- Link para o jQuery (necessário para o Slick) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
-    <!-- Link para o JavaScript do Slick -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-    <!-- Script de inicialização do carrossel -->
     <script>
-        $(document).ready(function(){
-            $('.carousel').slick({
-                autoplay: true,
-                autoplaySpeed: 4000,
-                dots: true,
-                arrows: true,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                slidesToScroll: 1
-            });
-        });
+        // Seleciona o container de iframes e define a contagem inicial
+        const iframeContainer = document.querySelector('.iframe-container');
+        const iframes = document.querySelectorAll('.iframe-container iframe');
+        let currentIndex = 0;
+
+        // Função para mover para o próximo iframe
+        function nextIframe() {
+            currentIndex = (currentIndex + 1) % iframes.length;
+            iframeContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        // Intervalo de 4 segundos para mudar automaticamente o iframe
+        setInterval(nextIframe, 4000);
     </script>
+
 </body>
 </html>

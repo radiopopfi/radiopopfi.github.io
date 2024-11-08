@@ -22,23 +22,10 @@
             height: 500px; /* Ajuste a altura conforme necessário */
             border: none;
         }
-        /* Estilo para o link cobrir o carrossel */
-        .iframe-link {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            text-decoration: none;
-        }
     </style>
 </head>
 <body>
 
-    <!-- Link que envolve o carrossel -->
-    <a href="https://popfi.com.br" target="_blank" class="iframe-link"></a>
-    
     <!-- Container do carrossel com iframes -->
     <div class="iframe-carousel">
         <div class="iframe-container">
@@ -57,7 +44,7 @@
         // Função para mover para o próximo iframe
         function nextIframe() {
             currentIndex = (currentIndex + 1) % iframes.length;
-            iframeContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            iframeContainer.style.transform = translateX(-${currentIndex * 100}%);
         }
 
         // Intervalo de 4 segundos para mudar automaticamente o iframe

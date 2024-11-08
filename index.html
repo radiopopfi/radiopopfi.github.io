@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrossel com Link e Animação</title>
+    <title>Carrossel Simples</title>
 
     <style>
         /* Estilo para o container do carrossel */
         .carousel-container {
             width: 100%;
-            max-width: 800px;
+            max-width: 800px; /* Ajustado para um tamanho mais adequado */
             margin: 0 auto;
             overflow: hidden;
             position: relative;
@@ -18,14 +18,14 @@
         /* Estilo para as imagens do carrossel */
         .carousel-images {
             display: flex;
-            transition: transform 0.5s ease;
+            transition: transform 0.5s ease; /* Transição suave para as imagens */
         }
 
         .carousel-images img {
             width: 100%;
             height: auto;
-            max-height: 500px;
-            object-fit: cover;
+            max-height: 500px; /* Limita a altura das imagens */
+            object-fit: cover; /* Garante que a imagem ocupe o espaço sem distorcer */
         }
 
         /* Botões de navegação */
@@ -77,16 +77,14 @@
 <body>
 
     <div class="carousel-container">
-        <!-- Link envolta do carrossel, leva ao site Popfi -->
-        <a href="https://popfi.com.br" target="_blank">
-            <div class="carousel-images">
-                <img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/iverti.png?raw=true" alt="Imagem 1">
-                <img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/lamodas.png?raw=true" alt="Imagem 2">
-                <img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi1.png?raw=true" alt="Imagem 3">
-                <img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi2.png?raw=true" alt="Imagem 4">
-                <img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi3.png?raw=true" alt="Imagem 5">
-            </div>
-        </a>
+        <!-- Container das imagens -->
+        <div class="carousel-images">
+            <img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/iverti.png?raw=true" alt="Imagem 1">
+            <img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/lamodas.png?raw=true" alt="Imagem 2">
+            <img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi1.png?raw=true" alt="Imagem 3">
+            <img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi2.png?raw=true" alt="Imagem 4">
+            <img src="https://github.com/radiopopfi/radiopopfi.github.io/blob/main/imagens/popfi3.png?raw=true" alt="Imagem 5">
+        </div>
 
         <!-- Botões de navegação -->
         <button class="prev">&#10094;</button>
@@ -148,16 +146,8 @@
             });
         });
 
-        // Função para animação automática
-        function autoSlide() {
-            changeImage(currentIndex + 1);
-        }
-
         // Inicia o carrossel mostrando a primeira imagem
         changeImage(0);
-
-        // Configura animação automática a cada 4 segundos
-        setInterval(autoSlide, 4000);
     </script>
 
 </body>
